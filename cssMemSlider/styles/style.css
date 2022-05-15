@@ -1,5 +1,5 @@
 body {
-    background-color: #404040;
+    background-color: #000000;
 }
 
 .slider {
@@ -38,10 +38,12 @@ body {
 .slider__text {
     display: flex;
     width: 400%;
-    height: 1em;
+    height: 1.4em;
 }
 
 .slider__text p {
+    font-size: 1.2em;
+    font-family: Arial, sans-serif;
     width: 25%;
     display: flex;
     color: white;
@@ -67,19 +69,26 @@ body {
 }
 
 .pagination {
-    margin: 0.2em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     cursor: pointer;
-    width: 0.7em;
-    background-color: #2f4f69;
-    height: 0.7em;
     border-radius: 50%;
-    border: .1em solid #2f4f69;
-    transition: all .2s linear;
 }
 
-.pagination:hover {
-    background-color: #839cb0;
-    border: .1em solid #839cb0;
+.pagination span {
+    width: 0.7em;
+    background-color: #652e79;
+    height: 0.7em;
+    border-radius: 50%;
+    border: .1em solid #652e79;
+    transition: all .2s linear;
+    margin: 0.4em;
+}
+
+.pagination:hover span {
+    background-color: #ebdbff;
+    border: .1em solid #ebdbff;
 }
 
 #slide-1:checked ~ .slider__images .slide-1 {
@@ -114,19 +123,19 @@ body {
     margin-left: -75%;
 }
 
-#slide-1:checked ~ .slider__content .slider__navigation .pagination-1,
-#slide-2:checked ~ .slider__content .slider__navigation .pagination-2,
-#slide-3:checked ~ .slider__content .slider__navigation .pagination-3,
-#slide-4:checked ~ .slider__content .slider__navigation .pagination-4 {
+#slide-1:checked ~ .slider__content .slider__navigation .pagination-1 span,
+#slide-2:checked ~ .slider__content .slider__navigation .pagination-2 span,
+#slide-3:checked ~ .slider__content .slider__navigation .pagination-3 span,
+#slide-4:checked ~ .slider__content .slider__navigation .pagination-4 span {
     background-color: transparent;
-    border: .1em solid #2f4f69;
+    border: .1em solid #652e79;
     transition: all .2s linear;
 }
 
-#slide-1:checked ~ .slider__content .slider__navigation .pagination-1:hover,
-#slide-2:checked ~ .slider__content .slider__navigation .pagination-2:hover,
-#slide-3:checked ~ .slider__content .slider__navigation .pagination-3:hover,
-#slide-4:checked ~ .slider__content .slider__navigation .pagination-4:hover {
-    border: .1em solid #839cb0;
+#slide-1:checked ~ .slider__content .slider__navigation .pagination-1:hover span,
+#slide-2:checked ~ .slider__content .slider__navigation .pagination-2:hover span,
+#slide-3:checked ~ .slider__content .slider__navigation .pagination-3:hover span,
+#slide-4:checked ~ .slider__content .slider__navigation .pagination-4:hover span {
+    border: .1em solid #ebdbff;
 }
 
