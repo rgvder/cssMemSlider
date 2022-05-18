@@ -134,6 +134,11 @@ body {
     border: .1em solid #ebdbff;
 }
 
+.pagination:active span {
+    background-color: #442050;
+    border: .1em solid #442050;
+}
+
 #slide-1:checked ~ .hidden .slider__images .slide-1 {
     margin-left: 0;
 }
@@ -180,5 +185,12 @@ body {
 #slide-3:checked ~ .slider__content .slider__navigation .pagination-3:hover span,
 #slide-4:checked ~ .slider__content .slider__navigation .pagination-4:hover span {
     border: .1em solid #ebdbff;
+}
+
+#slide-1:checked ~ .slider__content .slider__navigation .pagination-1:active span,
+#slide-2:checked ~ .slider__content .slider__navigation .pagination-2:active span,
+#slide-3:checked ~ .slider__content .slider__navigation .pagination-3:active span,
+#slide-4:checked ~ .slider__content .slider__navigation .pagination-4:active span {
+    border: .1em solid #442050;
 }
 
