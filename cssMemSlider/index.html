@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="styles/style.css">
+    <link rel="stylesheet" href="styles/normalize.css">
+    <title>CSS Mem Slider</title>
+</head>
+<body>
+<div class="slider">
+    <div class="slider__wrapper">
+        <div class="slider__items">
+            <input type="radio" name="slide" id="slide-1" checked>
+            <input type="radio" name="slide" id="slide-2">
+            <input type="radio" name="slide" id="slide-3">
+            <input type="radio" name="slide" id="slide-4">
+            <div class="hidden">
+                <div class="slider__images">
+                    <div class="slide slide-1">
+                        <img src="images/slide-1.jpg" alt="Это могли быть мы...">
+                    </div>
+                    <div class="slide">
+                        <img src="images/slide-2.jpg" alt="Я обязательно раздуплюсь после майских">
+                    </div>
+                    <div class="slide">
+                        <img src="images/slide-3.jpg" alt="Риба, вставай!!!">
+                    </div>
+                    <div class="slide">
+                        <img src="images/slide-4.jpg" alt="Нечасто такое настроение">
+                    </div>
+                </div>
+            </div>
+            <div class="slider__content">
+                <div class="slider__text-container">
+                    <div class="slider__text">
+                        <p class="slide-1">Это могли быть мы....</p>
+                        <p>Я обязательно раздуплюсь после майских</p>
+                        <p>Риба, вставай!!!</p>
+                        <p>Нечасто такое настроение</p>
+                    </div>
+                </div>
+
+                <div class="slider__navigation">
+                    <label for="slide-1" class="pagination pagination-1">
+                        <span></span>
+                    </label>
+                    <label for="slide-2" class="pagination pagination-2">
+                        <span></span>
+                    </label>
+                    <label for="slide-3" class="pagination pagination-3">
+                        <span></span>
+                    </label>
+                    <label for="slide-4" class="pagination pagination-4">
+                        <span></span>
+                    </label>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+</body>
+</html>

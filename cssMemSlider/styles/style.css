@@ -1,0 +1,196 @@
+body {
+    background-color: #000000;
+}
+
+.hidden {
+    border-radius: 1em;
+    overflow: hidden;
+    margin-bottom: 2em;
+}
+
+@media (max-width: 560px) {
+    .hidden {
+        margin-bottom: 1.2em;
+    }
+}
+
+.slider {
+    display: flex;
+    justify-content: center;
+    padding-top: 2em;
+}
+
+.slider__wrapper {
+    display: flex;
+    flex-direction: column;
+    width: 88vh;
+    margin-left: 2em;
+    margin-right: 2em;
+}
+
+@media (max-width: 420px) {
+    .slider__wrapper {
+        max-width: 80%;
+    }
+}
+
+.slider__images {
+    display: flex;
+    width: 400%;
+}
+
+.slider__items input {
+    display: none;
+}
+
+.slider__content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+@media (max-width: 560px) {
+    .slider__content {
+        flex-direction: column-reverse;
+    }
+}
+
+.slider__text-container {
+    max-width: 100%;
+    overflow: hidden;
+}
+
+.slider__text {
+    display: flex;
+    width: 400%;
+    height: 1.4em;
+}
+
+@media (max-width: 445px) {
+    .slider__text {
+        height: auto;
+    }
+}
+
+.slider__text p {
+    font-size: 1.2em;
+    font-family: Arial, sans-serif;
+    width: 25%;
+    display: flex;
+    color: white;
+    margin: 0;
+    transition: all .5s linear;
+}
+
+@media (max-width: 445px) {
+    .slider__text p {
+        font-size: 1em;
+    }
+}
+
+.slide {
+    width: 25%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    transition: all .5s linear;
+}
+
+.slide img {
+    width: 100%;
+    height: 100%;
+}
+
+.slider__navigation {
+    display: flex;
+}
+
+@media (max-width: 560px) {
+    .slider__navigation {
+        margin-bottom: 1.2em;
+    }
+}
+
+.pagination {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    border-radius: 50%;
+}
+
+.pagination span {
+    width: 0.7em;
+    background-color: #652e79;
+    height: 0.7em;
+    border-radius: 50%;
+    border: .1em solid #652e79;
+    transition: all .2s linear;
+    margin: 0.4em;
+}
+
+.pagination:hover span {
+    background-color: #ebdbff;
+    border: .1em solid #ebdbff;
+}
+
+.pagination:active span {
+    background-color: #442050;
+    border: .1em solid #442050;
+}
+
+#slide-1:checked ~ .hidden .slider__images .slide-1 {
+    margin-left: 0;
+}
+
+#slide-2:checked ~ .hidden .slider__images .slide-1 {
+    margin-left: -25%;
+}
+
+#slide-3:checked ~ .hidden .slider__images .slide-1 {
+    margin-left: -50%;
+}
+
+#slide-4:checked ~ .hidden .slider__images .slide-1 {
+    margin-left: -75%;
+}
+
+#slide-1:checked ~ .slider__content .slider__text .slide-1 {
+    margin-left: 0;
+}
+
+#slide-2:checked ~ .slider__content .slider__text .slide-1 {
+    margin-left: -25%;
+}
+
+#slide-3:checked ~ .slider__content .slider__text .slide-1 {
+    margin-left: -50%;
+}
+
+#slide-4:checked ~ .slider__content .slider__text .slide-1 {
+    margin-left: -75%;
+}
+
+#slide-1:checked ~ .slider__content .slider__navigation .pagination-1 span,
+#slide-2:checked ~ .slider__content .slider__navigation .pagination-2 span,
+#slide-3:checked ~ .slider__content .slider__navigation .pagination-3 span,
+#slide-4:checked ~ .slider__content .slider__navigation .pagination-4 span {
+    background-color: transparent;
+    border: .1em solid #652e79;
+    transition: all .2s linear;
+}
+
+#slide-1:checked ~ .slider__content .slider__navigation .pagination-1:hover span,
+#slide-2:checked ~ .slider__content .slider__navigation .pagination-2:hover span,
+#slide-3:checked ~ .slider__content .slider__navigation .pagination-3:hover span,
+#slide-4:checked ~ .slider__content .slider__navigation .pagination-4:hover span {
+    border: .1em solid #ebdbff;
+}
+
+#slide-1:checked ~ .slider__content .slider__navigation .pagination-1:active span,
+#slide-2:checked ~ .slider__content .slider__navigation .pagination-2:active span,
+#slide-3:checked ~ .slider__content .slider__navigation .pagination-3:active span,
+#slide-4:checked ~ .slider__content .slider__navigation .pagination-4:active span {
+    border: .1em solid #442050;
+}
+
